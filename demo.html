@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+</head>
+<body>
+
+	<!-- overflow: hidden;关键 -->
+	<textarea style="font-size: 12px;overflow: hidden;resize: none"></textarea>
+
+
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$('textarea').on('input',function(){
+		//通过原生js的scrollHeight和offsetHeight属性
+	　　if(this.scrollHeight>this.offsetHeight){
+	　　　　$(this).css('height',$(this).height()+12);
+	    }
+	})
+</script>
+
+
+
+</body>
+</html>
